@@ -8,36 +8,36 @@
 //var map = L.mapbox.map('map', "ramona2020.o3fkmamf").setView([42.36, -71.06],
 //	12);
 //var layer = L.mapbox.featureLayer().addTo(map)
-mapboxgl.accessToken = 'pk.eyJ1IjoicmFtb25hMjAyMCIsImEiOiI2ZjQzZTA4N2QxNjA5NzM2YjVhZTMwY2M1YmI2M2I2YSJ9.U1IwzOSQO-xjLU7NPxo-Dw';
+mapboxgl.accessToken = 'pk.eyJ1IjoidGZodWdoZXMiLCJhIjoiY2l0YW4yY3p1MDJpMjJubzYwaWIwbzVlOSJ9.1JIlibamCPwC32L28V42NA';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/ramona2020/civ45jd8x000b2jobbs53k0ua',
+    style: 'mapbox://styles/tfhughes/citelfrip005z2ip1gc8bks6z',
     zoom: 12,
     center: [-71.06, 42.36]
 });
 
 map.on('load', function () {
- map.addSource('somerville', {
+ map.addSource('1911', {
       type: 'raster',
-        url: 'mapbox://ramona2020.4tm1idpm'
+        url: 'mapbox://tfhughes.9m4iw6l9'
     });
  map.addLayer({
-    'id': 'somerville',
+    'id': '1911',
     'type': 'raster',
-    'source': 'somerville',
+    'source': '1911',
     'layout': {
          'visibility': 'visible'
         }
         });
-    map.addSource('boston', {
+    map.addSource('1865', {
          type: 'raster',
          //use the map id of the tileset appended to mapbox://
-           url: 'mapbox://ramona2020.66n3zq9m'
+           url: 'mapbox://tfhughes.7798bidg'
        });
     map.addLayer({
-       'id': 'boston',
+       'id': '1865',
        'type': 'raster',
-       'source': 'boston',
+       'source': '1865',
        'layout': {
             'visibility': 'visible'
            }
@@ -63,7 +63,7 @@ map.on('load', function () {
     });
 });
 
-var toggleableLayerIds = [ 'contours', 'somerville', 'boston' ];
+var toggleableLayerIds = [ 'contours', '1911', '1865' ];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
