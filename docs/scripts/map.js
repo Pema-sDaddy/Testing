@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tfhughes/citelfrip005z2ip1gc8bks6z',
     zoom: 12,
-    center: [-71.06, 42.36]
+    center: [-8.788, 54.915]
 });
 
 map.on('load', function () {
